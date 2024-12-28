@@ -1,69 +1,112 @@
-# Welcome to your Lovable project
+# Pokemon Explorer
 
-## Project info
+A modern, responsive web application for exploring Pokémon using the PokéAPI. Built with React, Vite, and TypeScript.
 
-**URL**: https://lovable.dev/projects/ac60b540-7cef-4482-84ac-af666a94d128
+## Features
 
-## How can I edit this code?
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- 🔍 Real-time search functionality
+- 🏷️ Filter Pokémon by type
+- 📄 Pagination for efficient data loading
+- ⭐ Favorite Pokémon system with local storage persistence
+- 🔎 Detailed view modal for each Pokémon
+- 🎨 Modern UI with Pokémon-themed styling
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **React + Vite**: For fast development and optimal production builds
+- **TypeScript**: For type safety and better developer experience
+- **Tailwind CSS**: For responsive and utility-first styling
+- **Shadcn/UI**: For pre-built, accessible UI components
+- **Tanstack Query**: For efficient data fetching and caching
+- **PokéAPI**: As the data source for Pokémon information
+- **Lucide React**: For high-quality icons
+- **Local Storage**: For persisting user favorites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ac60b540-7cef-4482-84ac-af666a94d128) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v14 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+```bash
+git clone https://github.com/Bansal0527/pokemon-explorer.git
+cd pokemon-explorer
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-**Use GitHub Codespaces**
+4. Open your browser and navigate to `http://localhost:8080/`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/        # Reusable UI components
+├── pages/            # Page components
+├── hooks/            # Custom React hooks
+├── lib/             # Utility functions and configurations
+├── types/           # TypeScript type definitions
+└── assets/          # Static assets
+```
 
-This project is built with .
+## Key Implementation Details
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Data Fetching
+- Uses Tanstack Query for efficient data fetching and caching
+- Implements pagination to manage large datasets
+- Handles loading and error states gracefully
 
-## How can I deploy this project?
+### State Management
+- Uses React's built-in state management with useState and useContext
+- Implements local storage for persisting user favorites
+- Manages filter and search states efficiently
 
-Simply open [Lovable](https://lovable.dev/projects/ac60b540-7cef-4482-84ac-af666a94d128) and click on Share -> Publish.
+### UI/UX Considerations
+- Implements responsive design using Tailwind CSS
+- Uses Shadcn/UI components for consistent styling
+- Provides loading states and error handling for better user experience
 
-## I want to use a custom domain - is that possible?
+## Challenges and Solutions
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+1. **API Rate Limiting**
+   - Challenge: PokéAPI has rate limits
+   - Solution: Implemented caching with Tanstack Query to reduce API calls
+
+2. **Performance with Large Lists**
+   - Challenge: Rendering large lists of Pokémon efficiently
+   - Solution: Implemented pagination and virtualization
+
+3. **Type Filtering Performance**
+   - Challenge: Filtering large datasets efficiently
+   - Solution: Optimized filter logic and implemented debouncing for search
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [PokéAPI](https://pokeapi.co/) for providing the Pokémon data
+- [Shadcn/UI](https://ui.shadcn.com/) for the beautiful UI components
+- The Pokémon Company for the inspiration
